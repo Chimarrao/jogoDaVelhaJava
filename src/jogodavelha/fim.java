@@ -66,7 +66,4 @@ public class fim {
         g.caixaDialogo.setVisible(true);
         g.label.setText("Jogo finalizado " + txt + " ganhou !");
     }
-    public void colorir(){
-        
-        }
     }
