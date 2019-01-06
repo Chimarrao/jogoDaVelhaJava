@@ -9,32 +9,16 @@ public class fim {
         String txt = "";
         ArrayList chave = new ArrayList();
 
-        chave.add(seq.get(0));
-        chave.add(seq.get(1));
-        chave.add(seq.get(2));
-        chave.add(seq.get(3));
-        chave.add(seq.get(4));
-        chave.add(seq.get(5));
-        chave.add(seq.get(6));
-        chave.add(seq.get(7));
-        chave.add(seq.get(8));
+        chave.add(seq.get(0)); chave.add(seq.get(1)); chave.add(seq.get(2));
+        chave.add(seq.get(3)); chave.add(seq.get(4)); chave.add(seq.get(5));
+        chave.add(seq.get(6)); chave.add(seq.get(7)); chave.add(seq.get(8));
 
-        chave.add(seq.get(0));
-        chave.add(seq.get(3));
-        chave.add(seq.get(6));
-        chave.add(seq.get(1));
-        chave.add(seq.get(4));
-        chave.add(seq.get(7));
-        chave.add(seq.get(2));
-        chave.add(seq.get(5));
-        chave.add(seq.get(8));
+        chave.add(seq.get(0)); chave.add(seq.get(3)); chave.add(seq.get(6));
+        chave.add(seq.get(1)); chave.add(seq.get(4)); chave.add(seq.get(7));
+        chave.add(seq.get(2)); chave.add(seq.get(5)); chave.add(seq.get(8));
 
-        chave.add(seq.get(0));
-        chave.add(seq.get(4));
-        chave.add(seq.get(8));
-        chave.add(seq.get(2));
-        chave.add(seq.get(4));
-        chave.add(seq.get(6));
+        chave.add(seq.get(0)); chave.add(seq.get(4)); chave.add(seq.get(8));
+        chave.add(seq.get(2)); chave.add(seq.get(4)); chave.add(seq.get(6));
 
         for (int i = 0; i < 24; i = i + 3) {
             for (int e = i; e < i + 3; e++) {
