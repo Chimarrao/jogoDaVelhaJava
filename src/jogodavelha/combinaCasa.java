@@ -11,15 +11,17 @@ public class combinaCasa {
 
     public int retornaCasa(ArrayList seq, String jog, String com) {
         int casa;
-
-        casa = construir(seq, jog, com);
-
-        if (casa == 0) {
+        Boolean t = false;
+        
+        casa = bloqueio(seq, jog);
+        
+        if (casa == 0 && t == false) {
             casa = triangulo(seq, jog);
+            t = true;
         }
 
         if (casa == 0) {
-            casa = bloqueio(seq, jog);
+            casa = construir(seq, jog, com);
         }
 
         return casa;
@@ -40,12 +42,11 @@ public class combinaCasa {
     }
 
     public int bloqueio(ArrayList s, String jog) {
-        int chave[] = {1, 2, 3,/**/ 4, 5, 6,/**/ 7, 8, 9,
-            1, 4, 7,/**/ 2, 5, 8,/**/ 3, 6, 9,
-            1, 5, 9,/**/ 3, 5, 7};
+        int chave[] = {1, 2, 3,/**/ 4, 5, 6,/**/7, 8, 9,
+            1, 4, 7,/**/2, 5, 8,/**/3, 6, 9,
+            1, 5, 9,/**/3, 5, 7};
 
         int i = 0, casa = 0;
-
         while (i < 24) {
             int a, b, c;
             a = chave[i];
