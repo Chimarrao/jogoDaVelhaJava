@@ -10,14 +10,14 @@ public class combinaCasa {
     public int retornaCasa(ArrayList seq, String jog, String com){
         int casa;
         
-        casa = triangulo(seq, jog);
+        casa = construir(seq, jog, com);
         
         if(casa == 0){
-            casa = bloqueio(seq, jog);
+            casa = triangulo(seq, jog);
         }
         
         if(casa == 0){
-            casa = construir(seq, jog, com);
+            casa = bloqueio(seq, jog);
         }
         
         return casa;
@@ -30,7 +30,9 @@ public class combinaCasa {
         if(s.get(2).equals(jog) || s.get(8).equals(jog)){
             casa = 4;
         }
-        
+        if(s.get(0).equals(jog) && s.get(8).equals(jog)){
+            casa = 5;
+        }
         return casa;
     }
     
