@@ -5,44 +5,52 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 
 public class GUI extends javax.swing.JFrame {
+
     static jogoDaVelha jogo;
+
     public GUI(jogoDaVelha jogo) {
         initComponents();
         GUI.jogo = jogo;
     }
-    
-    public void setarLados(String lado){
-        if(lado.equals("X")){
+
+    public void setarLados(String lado) {
+        if (lado.equals("X")) {
             jogo.jog = "X";
             jogo.com = "O";
-        }else{
+        } else {
             jogo.jog = "O";
             jogo.com = "X";
         }
     }
-    
+
     @SuppressWarnings("unchecked")
-    
-    public ArrayList seq(){
+
+    public ArrayList seq() {
         ArrayList seq = new ArrayList();
-        
-        seq.add(casa1.getText());seq.add(casa2.getText());seq.add(casa3.getText());
-        seq.add(casa4.getText());seq.add(casa5.getText());seq.add(casa6.getText());
-        seq.add(casa7.getText());seq.add(casa8.getText());seq.add(casa9.getText());
-        
+
+        seq.add(casa1.getText());
+        seq.add(casa2.getText());
+        seq.add(casa3.getText());
+        seq.add(casa4.getText());
+        seq.add(casa5.getText());
+        seq.add(casa6.getText());
+        seq.add(casa7.getText());
+        seq.add(casa8.getText());
+        seq.add(casa9.getText());
+
         return seq;
     }
-    
-    public void regJogada(JButton casa){
+
+    public void regJogada(JButton casa) {
         caixaDeEscolha.setVisible(false);
-        
+
         Boolean b = false;
         b = jogo.regJogada(casa);
-        if(b == true){
+        if (b == true) {
             jogo.jogar(seq(), this);
         }
     }
-    
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -313,14 +321,20 @@ public class GUI extends javax.swing.JFrame {
 
     private void botaoFimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFimActionPerformed
         System.out.println("Zerando os campos do jogo...");
-        
-        casa1.setText("");casa2.setText("");casa3.setText("");
-        casa4.setText("");casa5.setText("");casa6.setText("");
-        casa7.setText("");casa8.setText("");casa9.setText("");
-        
+
+        casa1.setText("");
+        casa2.setText("");
+        casa3.setText("");
+        casa4.setText("");
+        casa5.setText("");
+        casa6.setText("");
+        casa7.setText("");
+        casa8.setText("");
+        casa9.setText("");
+
         label.setHorizontalTextPosition(SwingConstants.CENTER);
         caixaDialogo.setVisible(false);
-        
+
         caixaDeEscolha.setVisible(true);
     }//GEN-LAST:event_botaoFimActionPerformed
 
@@ -333,7 +347,7 @@ public class GUI extends javax.swing.JFrame {
         caixaDeEscolha.setVisible(false);
         setarLados("O");
     }//GEN-LAST:event_OActionPerformed
-  
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton O;
